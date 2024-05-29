@@ -1,8 +1,8 @@
 #include "Logger.h"
 #include <iostream>
 #include <chrono>
-#include <fstream> // ִכÿ נמבמעט ח פאיכאלט
-#include <ctime>   // ִכÿ נמבמעט ח קאסמל
+#include <fstream> // to work with files
+#include <ctime>   // to work with time
 
 Logger::Logger(const std::string& filename) {
     logFile.open(filename, std::ios::app);
