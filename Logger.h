@@ -1,5 +1,3 @@
-// Logger.h
-
 #ifndef LOGGER_H
 #define LOGGER_H
 
@@ -8,7 +6,7 @@
 
 class Logger {
 private:
-    std::ofstream logFile; // Файл для запису логів
+    std::ofstream logFile; // A file to write in
 
 public:
     Logger(const std::string& filename);
