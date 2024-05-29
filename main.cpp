@@ -16,16 +16,16 @@ public:
     double price;
     std::string registrationNumber;
 
-    // Конструктор за замовчуванням
+    // Default constructor
     Car() {}
 
-    // Конструктор з параметрами
+    // Constructor with parameters
     Car(int _id, const std::string& _brand, const std::string& _model, int _year,
         const std::string& _color, double _price, const std::string& _regNumber)
         : id(_id), brand(_brand), model(_model), year(_year),
           color(_color), price(_price), registrationNumber(_regNumber) {}
 
-    // Перевантаження оператору <<
+    // Operator overload <<
     friend std::ostream& operator<<(std::ostream& os, const Car& car) {
         os << "Car #" << car.id << ": " << car.brand << " " << car.model
            << " (" << car.year << "), Color: " << car.color
@@ -38,7 +38,7 @@ int main() {
 
     Logger logger("aboba.log");
     logger << "Program started";
-    // Створення масиву об'єктів Car
+    // Array of objects Car
     std::vector<Car> cars = {
         {1, "Toyota", "Camry", 2018, "Blue", 25000, "AB1234FF"},
         {2, "Honda", "Civic", 2019, "Red", 22000, "KA5678FF"},
@@ -144,6 +144,5 @@ int main() {
     }
     logger << "Finished successfully";
     return 0;
-
 }
 
